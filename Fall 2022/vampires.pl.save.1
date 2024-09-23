@@ -1,0 +1,33 @@
+sire(alice,amber).
+sire(alice,ambrosia).
+sire(alice,bianca).
+sire(emmett,celeste).
+sire(emmett,drusilla).
+sire(emmett,esme).
+sire(victoria,lucinda).
+sire(thana,tatiana).
+sire(claudia,thana).
+sire(claudia,victoria).
+sire(bartholomew,alice).
+sire(bartholomew,cassius).
+sire(claudia,emmett).
+sire(alice,felix).
+sire(hunter,bartholomew).
+sire(hunter,jasper).
+sire(jasper,lazarus).
+sire(jasper,louis).
+sire(jasper,claudia).
+sire(lazarus,magnus).
+sire(lazarus,nikolas).
+sire(louis,orpheus).
+sire(louis,silas).
+sire(bartholomew,talon).
+sire(bartholomew,xander).
+
+siblings(X,Y) :- sire(Z,X), sire(Z,Y) X\==Y.
+grandsire(X,Y):- sire(X,Y), Sire(Y,Z).
+cousins(X,Y):- grandsire(W,X), gradsire(U,Y), (siblings(W,U).
+grandchildren(X,Y):- sire(X,_).
+bitten(X,Y) :- not(grandchildre(X,Y).
+auntcousin(X,Y) :-siblings(X,Z), Grandisre
+
